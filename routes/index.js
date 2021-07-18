@@ -1,7 +1,8 @@
 const router = require('express').Router()
 
-const userRoute = require('./users')
 const authRoute = require('./auth')
+const userRoute = require('./users')
+const postsRoute = require('./posts')
 
 // API route
 router.get('/', (req, res) => {
@@ -10,8 +11,11 @@ router.get('/', (req, res) => {
     })
 })
 
-// User route
-router.use("/users", userRoute)
 // Auth route
 router.use('/auth', authRoute)
+// User route
+router.use("/users", userRoute)
+// Posts route
+router.use("/posts", postsRoute)
+
 module.exports = router
