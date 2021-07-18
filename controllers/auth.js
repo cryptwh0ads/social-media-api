@@ -70,7 +70,7 @@ const login = async (req, res) => {
             message: ``,
             status_code: 500,
             error: true,
-            messageError: `Internal server error`
+            messageError: err
         })
     }
 }
